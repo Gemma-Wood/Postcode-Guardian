@@ -37,7 +37,6 @@
             </div>
         </div>
     </nav>
-
     <!--L: header or jumbotron-->
     <!--L: using width to width jumbotron in the examples in bootstrap-->
     <div class="my-5">
@@ -50,21 +49,97 @@
             </div>
         </div>
     </div>
-
-    <!--L: need a list group to appear when a postcode is searched-->
-
-
-
-    <!--section for postcode results-->
-
-
-    <!--section for crime results-->
-
 </head>
 
 <body>
 
+    <!--L: search form-->
+    <!--L: sizing needs to be done-->
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter a postcode"
+            aria-label="Recipient's username with two button addons">
+        <button class="btn btn-outline-secondary" type="button">Search</button>
+        <button class="btn btn-outline-secondary" type="button">Clear History</button>
+    </div>
+
+    <!--L: need a list group to appear when a postcode is searched-->
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            The current link item
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+    </div>
+
+    <!--section for postcode results-->
+    <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+        <h2>Add borders</h2>
+        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to
+            look
+            under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content
+            for
+            equal-height.</p>
+        <button class="btn btn-outline-secondary" type="button">Example button</button>
+    </div>
+
+    <!--section for crime results-->
+    <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+        <h2>Add borders</h2>
+        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to
+            look
+            under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content
+            for
+            equal-height.</p>
+        <button class="btn btn-outline-secondary" type="button">Example button</button>
+    </div>
+
+
+
+    <!--About us section-->
+    <!--use flexbox to make these horizontal-->
+    <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        </svg>
+        <h2 class="fw-normal">Rachel Atkinson</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
+        </p>
+        <p><a class="btn btn-secondary" href="#">Gemma-Wood</a></p>
+    </div>
+    <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        </svg>
+        <h2 class="fw-normal">Gemma Wood</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
+        </p>
+        <p><a class="btn btn-secondary" href="#">rdatkinson</a></p>
+    </div>
+    <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+        </svg>
+        <h2 class="fw-normal">Lauren Eaton</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
+        </p>
+        <!--github profile-->
+        <p><a class="btn btn-secondary" href="#">eatontechnology</a></p>
+    </div>
+
+    <footer>
+        Copyright blah blah
+    </footer>
+
     <!--JS link-->
+    <script src="assets/javascript/API.js"></script>
     <script src="assets/javascript/script.js"></script>
 </body>
 
