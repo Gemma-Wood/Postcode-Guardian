@@ -12,16 +12,26 @@
     margin-bottom: 0.625em;
 }
 
-/* .list-container {
-    margin-left: 0.625em !important;
-    margin-bottom: 0.625em;
-} */
-
-
 .list-group {
     margin-top: 0.625em !important;
 }
 
-.stats {
+.area-stats, .crime-stats {
+    margin: 0.625rem;
+    margin-top: 0;
+}
+
+.crime-stats {
+    margin-right: 22px;
+}
+
+.bios {
+    display: flex;
+    justify-content: center;
+}
+
+.rachel, .gemma, .lauren {
+    width: 250px;
+    text-align: center;
     margin: 0.625rem;
 }
