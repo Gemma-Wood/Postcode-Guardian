@@ -1,4 +1,11 @@
-.jumbo {
+/*body css to go here*/
+
+
+/*navbar css to go here*/
+
+
+/*jumbotron css*/
+.jumbotron {
     margin-top: 0 !important;
 }
 
@@ -6,22 +13,22 @@
     display: flex;
 }
 
-
 .search-container {
     margin-left: 0.625em !important;
     margin-bottom: 0.625em;
 }
-
-/* .list-container {
-    margin-left: 0.625em !important;
-    margin-bottom: 0.625em;
-} */
-
 
 .list-group {
     margin-top: 0.625em !important;
 }
 
 .stats {
-    margin: 0.625rem;
+    margin: 0.625em !important;
+}
+
+
+
+/*about us section*/
+.about-us {
+    display: flex;
 }
