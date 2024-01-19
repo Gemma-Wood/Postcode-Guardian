@@ -1,11 +1,17 @@
-.jumbo {
+/*body css to go here*/
+
+
+/*navbar css to go here*/
+
+
+/*jumbotron css*/
+.jumbotron {
     margin-top: 0 !important;
 }
 
 .data {
     display: flex;
 }
-
 
 .search-container {
     margin-left: 0.625em !important;
@@ -16,22 +22,15 @@
     margin-top: 0.625em !important;
 }
 
-.area-stats, .crime-stats {
-    margin: 0.625rem;
-    margin-top: 0;
+.stats {
+    margin: 0.625em !important;
 }
 
-.crime-stats {
-    margin-right: 22px;
+.list-group-item {
+    padding: 1.2em;
 }
 
-.bios {
+/*about us section*/
+.about-us {
     display: flex;
-    justify-content: center;
-}
-
-.rachel, .gemma, .lauren {
-    width: 250px;
-    text-align: center;
-    margin: 0.625rem;
 }

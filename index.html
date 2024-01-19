@@ -15,7 +15,7 @@
     <!--L: nav bar up here perhaps? linking to a contact section and about the people who made the website?-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Text here</a>
+            <a class="navbar-brand" href="#">Logo Here</a>
             <!--navbar toggler button for mobile use-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Text here</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Text here</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Text here</a>
+                        <a class="nav-link active" aria-current="page" href="#about-us">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -39,12 +33,13 @@
     </nav>
     <!--L: header or jumbotron-->
     <!--L: using width to width jumbotron in the examples in bootstrap-->
-    <div class="my-5 jumbo">
+    <div class="my-5 jumbotron">
         <div class="p-5 text-center bg-body-tertiary">
             <div class="container py-5">
                 <h1 class="text-body-emphasis">Postcode Guardian</h1>
                 <p class="col-lg-8 mx-auto lead">
-                    Text goes here, perhaps explaining the service and what it does.
+                    Your Gateway to Neighborhood Insight and Safety Assurance. <br>Navigate communities with confidence, empowered by real-time
+                    data on postcodes and crime, ensuring you make informed decisions for a safer tomorrow.
                 </p>
             </div>
         </div>
@@ -52,96 +47,85 @@
 </head>
 
 <body>
-
     <!--L: search form-->
     <!--L: sizing needs to be done-->
     <div class="data">
-    <div class="container search-container col-4">
-    <div class="input-group search">
-        <input type="text" class="form-control" placeholder="Enter a postcode"
-            aria-label="Recipient's username with two button addons">
-        <button class="btn btn-outline-secondary" type="button">Search</button>
-        <button class="btn btn-outline-secondary" type="button">Clear History</button>
-    </div>
-    <div class="list-group search-history">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            The current link item
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
-        <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
-    </div>
-    </div>
-    <!--L: need a list group to appear when a postcode is searched-->
-    <!--section for postcode results-->
-    <div class="h-100 p-5 bg-body-tertiary border rounded-3 area-stats">
-        <h2>Area Stats</h2>
-        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to
-            look
-            under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content
-            for
-            equal-height.</p>
-        <button class="btn btn-outline-secondary" type="button">Example button</button>
-    </div>
+        <div class="container search-container col-4">
+            <div class="input-group search">
+                <input type="text" class="form-control" placeholder="Enter a postcode" id="postcodeInput"
+                    aria-label="Recipient's username with two button addons">
+                <button id="searchButton" class="btn btn-outline-secondary" type="button" >Search</button>
+                <button class="btn btn-outline-secondary" type="button">Clear History</button>
+            </div>
+            <!--L: need a list group to populate when a postcode is searched-->
+            <div class="list-group search-history">
+                <a id="postcode1" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode2" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode3" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode4" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode5" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode6" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode7" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode8" href="#" class="list-group-item list-group-item-action"></a>
+            </div>
+        </div>
 
-    <!--section for crime results-->
-    <div class="h-100 p-5 bg-body-tertiary border rounded-3 crime-stats">
-        <h2>Crime Stats</h2>
-        <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to
-            look
-            under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content
-            for
-            equal-height.</p>
-        <button class="btn btn-outline-secondary" type="button">Example button</button>
+        <!--section for postcode results-->
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+            <h2>Postcode Data</h2>
+            <p id="regionData"></p>
+            <p id="districtData"></p>
+            <p id="wardData"></p>
+            <p id="parliamentData"></p>
+        </div>
+
+        <!--section for crime results-->
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+            <h2>Crime Data</h2>
+            <p id="crimeData"></p>
+        </div>
     </div>
-</div>
 
 
     <!--About us section-->
     <!--use flexbox to make these horizontal-->
-    <div class="bios">
-    <div class="col-lg-4 rachel">
+    <div class="container about-us" id="about-us">
+    <div class="col-lg-4 about-us-section">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
             role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
+            <title>Rachel Atkinson</title>
             <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
         </svg>
         <h2 class="fw-normal">Rachel Atkinson</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
-        </p>
-        <p><a class="btn btn-secondary" href="#">rdatkinson</a></p>
+        <p>Placeholder text</p>
+        <p><a class="btn btn-secondary" href="#">Gemma-Wood</a></p>
     </div>
-    <div class="col-lg-4 gemma">
+    <div class="col-lg-4 about-us-section">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
             role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
+            <title>Gemma Wood</title>
             <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
         </svg>
         <h2 class="fw-normal">Gemma Wood</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
-        </p>
-        <p><a class="btn btn-secondary" href="#">Gemma-Wood</a></p>
+        <p>Placeholder text</p>
+        <p><a class="btn btn-secondary" href="#">rdatkinson</a></p>
     </div>
-    <div class="col-lg-4 lauren">
+    <div class="col-lg-4 about-us-section">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
             role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
+            <title>Lauren Eaton</title>
             <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
         </svg>
         <h2 class="fw-normal">Lauren Eaton</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.
-        </p>
+        <p>Placeholder text</p>
         <!--github profile-->
         <p><a class="btn btn-secondary" href="#">eatontechnology</a></p>
     </div>
-</div>
+    </div>
 
     <footer>
         Copyright blah blah
     </footer>
-
     <!--JS link-->
     <script src="assets/javascript/API.js"></script>
     <script src="assets/javascript/script.js"></script>
