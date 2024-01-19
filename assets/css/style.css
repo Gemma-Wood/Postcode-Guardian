@@ -26,7 +26,9 @@
     margin: 0.625em !important;
 }
 
-
+.list-group-item {
+    padding: 1.2em;
+}
 
 /*about us section*/
 .about-us {
