@@ -1,0 +1,39 @@
+<<<<<<< Updated upstream
+=======
+/*body css to go here*/
+
+
+/*navbar css to go here*/
+
+
+/*jumbotron css*/
+.jumbotron {
+    margin-top: 0 !important;
+}
+
+.data {
+    display: flex;
+}
+
+.search-container {
+    margin-left: 0.625em !important;
+    margin-bottom: 0.625em;
+}
+
+.list-group {
+    margin-top: 0.625em !important;
+}
+
+.stats {
+    margin: 0.625em !important;
+}
+
+.list-group-item {
+    padding: 1.2em;
+}
+
+/*about us section*/
+.about-us {
+    display: flex;
+}
+>>>>>>> Stashed changes
