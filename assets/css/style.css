@@ -33,19 +33,21 @@
 }
 
 .list-group-item {
-    padding: 1.2em;
+    padding: 0.8em !important;
 }
 
 .postcode-data, .crime-data {
-    margin: 0.625rem;
+    margin: 0.625em;
     margin-top: 0;
-    width: 400px;
-    height: 300px !important;
+    width: 25em;
+    height: 18.75em !important;
+    
 }
 
-/* .crime-data {
-    margin-right: 22px;
-} */
+.crime-data-container, .postcode-data-container {
+    overflow-y: auto !important;
+    /* Add a scrollbar when the content overflows the div */
+}
 
 /*about us section*/
 .about-us {
@@ -56,12 +58,8 @@
 .about-us-section {
     width: 250px;
     text-align: center;
-    margin: 0.625rem;
-}
-
-.crime-data-container {
-    overflow-y: auto !important;
-    /* Add a scrollbar when the content overflows the div */
+    margin: 0.625em;
+    margin-top: 15em;
 }
 
 .crime-data-container ul {
