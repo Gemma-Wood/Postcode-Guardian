@@ -40,6 +40,7 @@
     margin: 0.625rem;
     margin-top: 0;
     width: 400px;
+    height: 300px !important;
 }
 
 /* .crime-data {
@@ -56,10 +57,9 @@
     width: 250px;
     text-align: center;
     margin: 0.625rem;
+}
 
 .crime-data-container {
-    height: 300px !important;
-    /* Set the desired height for the div, we can change this if it doesn't work*/
     overflow-y: auto !important;
     /* Add a scrollbar when the content overflows the div */
 }
