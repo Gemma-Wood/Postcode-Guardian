@@ -38,7 +38,9 @@
             <div class="container py-5">
                 <h1 class="text-body-emphasis">Postcode Guardian</h1>
                 <p class="col-lg-8 mx-auto lead">
-                    Your Gateway to Neighborhood Insight and Safety Assurance. <br>Navigate communities with confidence, empowered by real-time
+                    Your Gateway to Neighbourhood Insight and Safety Assurance. <br>Navigate communities with
+                    confidence,
+                    empowered by local
                     data on postcodes and crime, ensuring you make informed decisions for a safer tomorrow.
                 </p>
             </div>
@@ -54,8 +56,10 @@
             <div class="input-group search">
                 <input type="text" class="form-control" placeholder="Enter a postcode" id="postcodeInput"
                     aria-label="Recipient's username with two button addons">
-                <button id="searchButton" class="btn btn-outline-secondary" type="button" >Search</button>
+
+                <button id="searchButton" class="btn btn-outline-secondary" type="button">Search</button>
                 <button id="clearHistoryButton" class="btn btn-outline-secondary" type="button">Clear History</button>
+
             </div>
             <!--L: need a list group to populate when a postcode is searched-->
             <div class="list-group search-history">
@@ -71,7 +75,8 @@
         </div>
 
         <!--section for postcode results-->
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3 postcode-data">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3 postcode-data-container">
+
             <h2>Postcode Data</h2>
             <p id="regionData"></p>
             <p id="districtData"></p>
@@ -80,12 +85,12 @@
         </div>
 
         <!--section for crime results-->
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3 crime-data">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3 crime-data-container">
             <h2>Crime Data</h2>
+            <p>Results (1 - 30)</p>
             <p id="crimeData"></p>
         </div>
     </div>
-
 
     <!--About us section-->
     <!--use flexbox to make these horizontal-->
@@ -114,7 +119,11 @@
     <footer>
         Copyright blah blah
     </footer>
-    <!--JS link-->
+    <!-- Include day.js script tag -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6"></script>
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!--JS links-->
     <script src="assets/javascript/API.js"></script>
     <script src="assets/javascript/script.js"></script>
 </body>
