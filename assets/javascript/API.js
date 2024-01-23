@@ -46,3 +46,55 @@ function fetchPostcodeInfo(postcode) {
         });
 }
 
+// Function to fetch crime data using latitude and longitude
+function fetchCrimeData(latitude, longitude) {
+    // Set the limit to 30 results
+    const limit = 30;
+
+    // Make API call using fetch with the limit parameter
+    const crimeAPIURL = `https://data.police.uk/api/crimes-street/all-crime?lat=${latitude}&lng=${longitude}&limit=${limit}`;
+    fetch(crimeAPIURL)
+        .then(response => response.json())
+        .then(crimeData => {
+            // Log the crime data response
+            console.log('Crime Data Response:', crimeData);
+
+            // Log all categories of crime
+            console.log('All Categories of Crime:');
+            crimeData.forEach(crime => {
+                console.log(crime.category);
+            });
+
+            // Update the HTML with the fetched crime data
+            document.getElementById('crimeData').innerHTML = formatCrimeData(crimeData);
+        })
+        .catch(error => {
+            console.error('Error fetching crime data:', error);
+        });
+}
+
+// Function to format and create HTML representation of crime data
+function formatCrimeData(crimeData) {
+    let html = '<ul>';
+
+    // Limit the loop to the first 30 results
+    for (let i = 0; i < Math.min(30, crimeData.length); i++) {
+        const crime = crimeData[i];
+
+        // Format the month and year using day.js
+        const formattedMonthYear = dayjs(crime.month).format('MMMM, YYYY');
+
+        html += `<li>
+            <strong>Category:</strong> ${crime.category}<br>
+            <strong>Location:</strong> ${crime.location.street.name}<br>
+            <strong>Month:</strong> ${formattedMonthYear}<br>
+        </li>`;
+    }
+
+    html += '</ul>';
+
+    return html;
+}
+
+// Attach the fetchPostcodeData function to the search button
+document.getElementById('searchButton').addEventListener('click', fetchPostcodeData);
