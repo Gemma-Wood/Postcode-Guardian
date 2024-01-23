@@ -11,16 +11,22 @@
 
 .data {
     display: flex;
+    justify-content: center;
+    height: 336px;
 }
 
 .search-container {
     margin-left: 0.625em !important;
     margin-bottom: 0.625em;
+    margin-right: 10px;
+    flex-grow: 0.1;
+    width: 350px;
 }
 
-.list-group {
+/* .list-group {
     margin-top: 0.625em !important;
-}
+    height: 42px !important;
+} */
 
 .stats {
     margin: 0.625em !important;
@@ -30,7 +36,24 @@
     padding: 1.2em;
 }
 
+.postcode-data, .crime-data {
+    margin: 0.625rem;
+    margin-top: 0;
+    width: 400px;
+}
+
+/* .crime-data {
+    margin-right: 22px;
+} */
+
 /*about us section*/
 .about-us {
     display: flex;
+    justify-content: center;
+}
+
+.about-us-section {
+    width: 250px;
+    text-align: center;
+    margin: 0.625rem;
 }

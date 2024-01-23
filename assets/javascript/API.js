@@ -4,12 +4,19 @@ const postcodeAPI = "https://api.postcodes.io/postcodes/";
 //the crime API at the moment extracts crime data froma specific location and date. Can change later if we want
 const crimeAPI = "https://data.police.uk/api/crimes-street/all-crime?lat=52.629729&lng=-1.131592&date=2017-01";
 
-// Function to fetch postcode data
-function fetchPostcodeData() {
-    // Get the postcode from the input field
-    const postcodeToQuery = document.getElementById('postcodeInput').value;
+// // Function to fetch postcode data
+// function fetchPostcodeData() {
+//     // Get the postcode from the input field
+//     const postcodeToQuery = document.getElementById('postcodeInput').value;
 
-    // Make API call to fetch postcode data
+//     // Make API call to fetch postcode data
+//     fetchPostcodeInfo(postcodeToQuery);
+// }
+
+// Function to fetch postcode data and save searches
+function fetchPostcodeData() {
+    const postcodeToQuery = document.getElementById('postcodeInput').value;
+    saveSearchToLocalStorage(postcodeToQuery);
     fetchPostcodeInfo(postcodeToQuery);
 }
 

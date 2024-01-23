@@ -55,7 +55,7 @@
                 <input type="text" class="form-control" placeholder="Enter a postcode" id="postcodeInput"
                     aria-label="Recipient's username with two button addons">
                 <button id="searchButton" class="btn btn-outline-secondary" type="button" >Search</button>
-                <button class="btn btn-outline-secondary" type="button">Clear History</button>
+                <button id="clearHistoryButton" class="btn btn-outline-secondary" type="button">Clear History</button>
             </div>
             <!--L: need a list group to populate when a postcode is searched-->
             <div class="list-group search-history">
@@ -71,7 +71,7 @@
         </div>
 
         <!--section for postcode results-->
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3 postcode-data">
             <h2>Postcode Data</h2>
             <p id="regionData"></p>
             <p id="districtData"></p>
@@ -80,7 +80,7 @@
         </div>
 
         <!--section for crime results-->
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3 crime-data">
             <h2>Crime Data</h2>
             <p id="crimeData"></p>
         </div>
@@ -91,31 +91,19 @@
     <!--use flexbox to make these horizontal-->
     <div class="container about-us" id="about-us">
     <div class="col-lg-4 about-us-section">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Rachel Atkinson</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-        </svg>
+        <img src="./assets/media/rachel.jpeg" class="bd-placeholder-img rounded-circle" width="140" height="140">
         <h2 class="fw-normal">Rachel Atkinson</h2>
-        <p>Placeholder text</p>
-        <p><a class="btn btn-secondary" href="#">Gemma-Wood</a></p>
-    </div>
-    <div class="col-lg-4 about-us-section">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Gemma Wood</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-        </svg>
-        <h2 class="fw-normal">Gemma Wood</h2>
         <p>Placeholder text</p>
         <p><a class="btn btn-secondary" href="#">rdatkinson</a></p>
     </div>
     <div class="col-lg-4 about-us-section">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Lauren Eaton</title>
-            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
-        </svg>
+        <img src="./assets/media/gemma.jpeg" class="bd-placeholder-img rounded-circle" width="140" height="140">
+        <h2 class="fw-normal">Gemma Wood</h2>
+        <p>Placeholder text</p>
+        <p><a class="btn btn-secondary" href="#">Gemma-Wood</a></p>
+    </div>
+    <div class="col-lg-4 about-us-section">
+        <img src="./assets/media/lauren.jpeg" class="bd-placeholder-img rounded-circle" width="140" height="140">
         <h2 class="fw-normal">Lauren Eaton</h2>
         <p>Placeholder text</p>
         <!--github profile-->
