@@ -40,11 +40,6 @@
     width: 350px;
 }
 
-/* .list-group {
-    margin-top: 0.625em !important;
-    height: 42px !important;
-} */
-
 .stats {
     margin: 0.625em !important;
 }
@@ -71,6 +66,10 @@
 }
 
 /*about us section*/
+.developer-jumbotron {
+    margin-top: 15em !important;
+}
+
 .about-us {
     display: flex;
     justify-content: center;
@@ -88,9 +87,14 @@
     font-size: 30px !important;
 }
 
-.profile-pic img {
+.github-link img {
     height: 30px;
     width: 30px;
+    transition: .5s;
+}
+
+.github-link img:hover {
+    transform: scale(1.2);
 }
 
 .crime-data-container ul {
@@ -108,4 +112,16 @@ footer {
     background-color: #2d2d2d;
     padding: 8px;
     color: #ffffff;
+  
+footer p {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/*modal css*/
+.modal-pic {
+    width: 270px;
+    height: 80px;
 }
