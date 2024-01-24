@@ -1,14 +1,31 @@
-/*body css to go here*/
-
-
 /*navbar css to go here*/
+.navbar {
+    background-color: #2d2d2d !important;
+}
 
+.nav-link {
+    color: #ffffff !important;
+}
+.navlogo {
+    height: 40px;
+    width: 80px;
+}
 
 /*jumbotron css*/
 .jumbotron {
     margin-top: 0 !important;
 }
 
+.jumbotitle {
+    color: #ffffff !important;
+}
+
+.jumbotext {
+    color: #ffffff;
+    background-color: #1C7BC0 !important;
+}
+
+/*body css to go here*/
 .data {
     display: flex;
     justify-content: center;
@@ -22,11 +39,6 @@
     flex-grow: 0.1;
     width: 350px;
 }
-
-/* .list-group {
-    margin-top: 0.625em !important;
-    height: 42px !important;
-} */
 
 .stats {
     margin: 0.625em !important;
@@ -47,6 +59,10 @@
 .crime-data-container, .postcode-data-container {
     overflow-y: auto !important;
     /* Add a scrollbar when the content overflows the div */
+    margin: 0.625em;
+    margin-top: 0;
+    width: 25em;
+    height: 18.75em !important;
 }
 
 /*about us section*/
@@ -63,6 +79,7 @@
     width: 250px;
     text-align: center;
     margin: 0.625em;
+    margin-top: 8em;
 }
 
 /*resized font for about us section*/
@@ -90,6 +107,12 @@
     margin-bottom: 10px;
 }
 
+/*footer css*/
+footer {
+    background-color: #2d2d2d;
+    padding: 8px;
+    color: #ffffff;
+  
 footer p {
     display: flex;
     justify-content: center;
