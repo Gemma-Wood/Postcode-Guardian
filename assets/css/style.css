@@ -82,6 +82,7 @@
 /*about us section*/
 .developer-jumbotron {
     margin-top: 15em !important;
+    margin-bottom: 0 !important;
 }
 
 .about-us {
