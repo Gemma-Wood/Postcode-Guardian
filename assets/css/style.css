@@ -62,6 +62,16 @@
     margin-top: 15em;
 }
 
+/*resized font for about us section*/
+.fw-normal {
+    font-size: 30px !important;
+}
+
+.profile-pic img {
+    height: 30px;
+    width: 30px;
+}
+
 .crime-data-container ul {
     list-style-type: none !important;
         padding: 0;
