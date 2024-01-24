@@ -6,14 +6,13 @@ const postcodeAPI = "https://api.postcodes.io/postcodes/";
 const postcodeCrime = "https://api.postcodes.io/postcodes/<postcode>"
 const crimeAPI = "https://data.police.uk/api/crimes-street/all-crime?lat=LAT_HERE&lng=LONG_HERE";
 
-// Function to fetch postcode data and save searches
 function fetchPostcodeData() {
     const postcodeToQuery = document.getElementById('postcodeInput').value;
 
     // Validate the postcode format
     if (!isValidUKPostcode(postcodeToQuery)) {
-        // Display a modal with an error message
-        displayErrorModal("Please enter a valid UK postcode.");
+        // Display the error modal
+        displayErrorModal();
         return;
     }
 
@@ -32,11 +31,11 @@ function isValidUKPostcode(postcode) {
 }
 
 //modal js here
-
-
-//need to format the modal to look nicer
-//also need to make that duplicates of search history don't exist
-//get modal from bootstrap?
+// Function to display the error modal
+function displayErrorModal() {
+    const modal = new bootstrap.Modal(document.querySelector('.modal'));
+    modal.show();
+}
 
 // Function to fetch postcode information from the Postcodes API
 function fetchPostcodeInfo(postcode) {

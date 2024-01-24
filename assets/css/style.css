@@ -93,3 +93,9 @@ footer p {
     font-size: 14px;
     margin-top: 20px;
 }
+
+/*modal css*/
+.modal-pic {
+    width: 270px;
+    height: 80px;
+}
