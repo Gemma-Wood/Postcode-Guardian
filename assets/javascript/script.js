@@ -14,18 +14,6 @@ function updateSearchHistory() {
     // Clear existing items in the list group
     listGroup.innerHTML = '';
 
-    // for (let i = 1; i <= 5; i++) {
-    //     const searchElement = document.getElementById(`postcode${i}`);
-    //     if (searches[i - 1]) {
-    //         searchElement.textContent = searches[i - 1];
-    //         searchElement.href = "#";
-    //         searchElement.style.display = 'block';
-    //         searchElement.onclick = () => fetchPostcodeInfo(searches[i - 1]);
-    //     } else {
-    //         searchElement.style.display = 'none';
-    //     }
-    // }
-
     // Loop through the searches and add them to the list group
     for (let i = 0; i < searches.length; i++) {
         const listItem = document.createElement('a');

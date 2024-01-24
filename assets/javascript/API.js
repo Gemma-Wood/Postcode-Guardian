@@ -9,9 +9,82 @@ const crimeAPI = "https://data.police.uk/api/crimes-street/all-crime?lat=LAT_HER
 // Function to fetch postcode data and save searches
 function fetchPostcodeData() {
     const postcodeToQuery = document.getElementById('postcodeInput').value;
+
+    // Validate the postcode format
+    if (!isValidUKPostcode(postcodeToQuery)) {
+        // Display a modal with an error message
+        displayErrorModal("Please enter a valid UK postcode.");
+        return;
+    }
+
+    // Save the search to local storage
     saveSearchToLocalStorage(postcodeToQuery);
+
+    // Fetch postcode information
     fetchPostcodeInfo(postcodeToQuery);
 }
+
+// Function to validate UK postcode format
+function isValidUKPostcode(postcode) {
+    // Regular expression for UK postcode format
+    const postcodeRegex = /^[A-Z]{1,2}\d[A-Z\d]? \d[A-Z]{2}$/i;
+    return postcodeRegex.test(postcode);
+}
+
+//error modal
+// Function to create and display a modal
+function displayErrorModal(errorMessage) {
+    // Create modal container
+    const modalContainer = document.createElement('div');
+    modalContainer.classList.add('modal');
+    modalContainer.id = 'errorModal';
+
+    // Create modal content
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    // Create close button
+    const closeButton = document.createElement('span');
+    closeButton.classList.add('close');
+    closeButton.innerHTML = '&times;';
+    closeButton.addEventListener('click', closeModal);
+
+    // Create error message element
+    const errorMessageElement = document.createElement('p');
+    errorMessageElement.textContent = errorMessage;
+
+    // Append elements to modal content
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(errorMessageElement);
+
+    // Append modal content to modal container
+    modalContainer.appendChild(modalContent);
+
+    // Append modal container to the body
+    document.body.appendChild(modalContainer);
+
+    // Display the modal
+    modalContainer.style.display = 'block';
+
+    // Close the modal when clicking outside of it
+    window.addEventListener('click', function (event) {
+        if (event.target === modalContainer) {
+            closeModal();
+        }
+    });
+}
+
+// Function to close the modal
+function closeModal() {
+    const modalContainer = document.getElementById('errorModal');
+    if (modalContainer) {
+        modalContainer.style.display = 'none';
+    }
+}
+
+//need to format the modal to look nicer
+//also need to make that duplicates of search history don't exist
+//get modal from bootstrap?
 
 // Function to fetch postcode information from the Postcodes API
 function fetchPostcodeInfo(postcode) {
