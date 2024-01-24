@@ -6,9 +6,10 @@
 .nav-link {
     color: #ffffff !important;
 }
+
 .navlogo {
     height: 40px;
-    width: 80px;
+    width: 120px;
 }
 
 /*jumbotron css*/
@@ -43,10 +44,11 @@
 
 .btn {
     transition-duration: 0.4s !important;
-  }
+}
   
 .btn:hover {
     background-color: #1C7BC0 !important; 
+
     color: white !important;
 }
 
@@ -58,15 +60,17 @@
     padding: 0.8em !important;
 }
 
-.postcode-data, .crime-data {
+.postcode-data,
+.crime-data {
     margin: 0.625em;
     margin-top: 0;
     width: 25em;
     height: 18.75em !important;
-    
+
 }
 
-.crime-data-container, .postcode-data-container {
+.crime-data-container,
+.postcode-data-container {
     overflow-y: auto !important;
     /* Add a scrollbar when the content overflows the div */
     margin: 0.625em;
@@ -84,7 +88,6 @@
     display: inline-flex;
     justify-content: center;
     width: 100% !important;
-    margin-top: 4rem;
     padding-left: 50%;
     padding-right: 50%;
     background-color: #1C7BC0;
@@ -97,6 +100,10 @@
     padding-top: 4em;
 }
 
+
+.about-us-section h2 {
+    color: white;
+}
 /*resized font for about us section*/
 .fw-normal {
     font-size: 30px !important;
@@ -114,8 +121,8 @@
 
 .crime-data-container ul {
     list-style-type: none !important;
-        padding: 0;
-        margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .crime-data-container li {
@@ -127,7 +134,8 @@ footer {
     background-color: #2d2d2d;
     padding: 8px;
     color: #ffffff;
-  
+}
+
 footer p {
     display: flex;
     justify-content: center;
