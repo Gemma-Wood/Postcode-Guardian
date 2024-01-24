@@ -1,10 +1,18 @@
 function saveSearchToLocalStorage(postcode) {
     let searches = JSON.parse(localStorage.getItem('searches')) || [];
-    searches.unshift(postcode);
-    // searches = searches.slice(0, 5); // Keep only last 5 searches
-    searches = searches.slice(0, 8); // Keep only last 8 searches
-    localStorage.setItem('searches', JSON.stringify(searches));
-    updateSearchHistory();
+
+    // Check if the postcode is already in the list
+    if (!searches.includes(postcode)) {
+        searches.unshift(postcode);
+        // searches = searches.slice(0, 5); // Keep only last 5 searches
+        searches = searches.slice(0, 8); // Keep only last 8 searches
+        localStorage.setItem('searches', JSON.stringify(searches));
+
+        // Clear the search input value
+        document.getElementById('postcodeInput').value = '';
+
+        updateSearchHistory();
+    }
 }
 
 function updateSearchHistory() {
@@ -27,11 +35,15 @@ function updateSearchHistory() {
     }
 }
 
-document.getElementById('clearHistoryButton').addEventListener('click', function() {
+document.getElementById('clearHistoryButton').addEventListener('click', function () {
     localStorage.removeItem('searches');
+
+    // Clear the search input value
+    document.getElementById('postcodeInput').value = '';
+
     updateSearchHistory();
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     updateSearchHistory();
 });
