@@ -149,3 +149,8 @@ footer p {
     width: 270px;
     height: 80px;
 }
+
+html,
+body {
+    overflow-x: hidden;
+}
