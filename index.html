@@ -17,7 +17,7 @@
     <!--L: nav bar up here perhaps? linking to a contact section and about the people who made the website?-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo Here</a>
+            <a class="navbar-brand">Logo Here</a>
             <!--navbar toggler button for mobile use-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,14 +64,14 @@
             </div>
             <!--L: need a list group to populate when a postcode is searched-->
             <div class="list-group search-history">
-                <a id="postcode1" href="#" class="list-group-item list-group-item-action"></a>
-                <a id="postcode2" href="#" class="list-group-item list-group-item-action"></a>
-                <a id="postcode3" href="#" class="list-group-item list-group-item-action"></a>
-                <a id="postcode4" href="#" class="list-group-item list-group-item-action"></a>
-                <a id="postcode5" href="#" class="list-group-item list-group-item-action"></a>
-                <a id="postcode6" href="#" class="list-group-item list-group-item-action"></a>
-                <a id="postcode7" href="#" class="list-group-item list-group-item-action"></a>
-                <a id="postcode8" href="#" class="list-group-item list-group-item-action"></a>
+                <a id="postcode1" class="list-group-item list-group-item-action"></a>
+                <a id="postcode2" class="list-group-item list-group-item-action"></a>
+                <a id="postcode3" class="list-group-item list-group-item-action"></a>
+                <a id="postcode4" class="list-group-item list-group-item-action"></a>
+                <a id="postcode5" class="list-group-item list-group-item-action"></a>
+                <a id="postcode6" class="list-group-item list-group-item-action"></a>
+                <a id="postcode7" class="list-group-item list-group-item-action"></a>
+                <a id="postcode8" class="list-group-item list-group-item-action"></a>
             </div>
         </div>
 
@@ -120,16 +120,40 @@
     </div>
     </div>
 
+    <!--modal stuff-->
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><img src="./assets/logos/PoscodeGuardian.jpg"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Please input a valid UK postcode.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.</p>
     </footer>
-    <!-- Include day.js script tag -->
+   
+    <!-- day.js -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6"></script>
-    <!--Jquery-->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!--JS links-->
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!--custom scripts -->
     <script src="assets/javascript/API.js"></script>
     <script src="assets/javascript/script.js"></script>
+
 </body>
 
 </html>

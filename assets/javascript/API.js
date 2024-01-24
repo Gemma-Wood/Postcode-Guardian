@@ -31,56 +31,8 @@ function isValidUKPostcode(postcode) {
     return postcodeRegex.test(postcode);
 }
 
-//error modal
-// Function to create and display a modal
-function displayErrorModal(errorMessage) {
-    // Create modal container
-    const modalContainer = document.createElement('div');
-    modalContainer.classList.add('modal');
-    modalContainer.id = 'errorModal';
+//modal js here
 
-    // Create modal content
-    const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
-
-    // Create close button
-    const closeButton = document.createElement('span');
-    closeButton.classList.add('close');
-    closeButton.innerHTML = '&times;';
-    closeButton.addEventListener('click', closeModal);
-
-    // Create error message element
-    const errorMessageElement = document.createElement('p');
-    errorMessageElement.textContent = errorMessage;
-
-    // Append elements to modal content
-    modalContent.appendChild(closeButton);
-    modalContent.appendChild(errorMessageElement);
-
-    // Append modal content to modal container
-    modalContainer.appendChild(modalContent);
-
-    // Append modal container to the body
-    document.body.appendChild(modalContainer);
-
-    // Display the modal
-    modalContainer.style.display = 'block';
-
-    // Close the modal when clicking outside of it
-    window.addEventListener('click', function (event) {
-        if (event.target === modalContainer) {
-            closeModal();
-        }
-    });
-}
-
-// Function to close the modal
-function closeModal() {
-    const modalContainer = document.getElementById('errorModal');
-    if (modalContainer) {
-        modalContainer.style.display = 'none';
-    }
-}
 
 //need to format the modal to look nicer
 //also need to make that duplicates of search history don't exist
