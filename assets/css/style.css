@@ -67,9 +67,14 @@
     font-size: 30px !important;
 }
 
-.profile-pic img {
+.github-link img {
     height: 30px;
     width: 30px;
+    transition: .5s;
+}
+
+.github-link img:hover {
+    transform: scale(1.2);
 }
 
 .crime-data-container ul {
@@ -80,4 +85,11 @@
 
 .crime-data-container li {
     margin-bottom: 10px;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 20px;
 }
