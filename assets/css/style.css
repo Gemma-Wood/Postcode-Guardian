@@ -50,6 +50,10 @@
 }
 
 /*about us section*/
+.developer-jumbotron {
+    margin-top: 15em !important;
+}
+
 .about-us {
     display: flex;
     justify-content: center;
@@ -59,7 +63,6 @@
     width: 250px;
     text-align: center;
     margin: 0.625em;
-    margin-top: 15em;
 }
 
 /*resized font for about us section*/
