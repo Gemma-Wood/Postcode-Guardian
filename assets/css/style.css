@@ -1,5 +1,3 @@
-body {}
-
 /*navbar css to go here*/
 .navbar {
     background-color: #2d2d2d !important;
@@ -47,9 +45,10 @@ body {}
 .btn {
     transition-duration: 0.4s !important;
 }
-
+  
 .btn:hover {
-    background-color: #1C7BC0 !important;
+    background-color: #1C7BC0 !important; 
+
     color: white !important;
 }
 
@@ -101,10 +100,10 @@ body {}
     padding-top: 4em;
 }
 
+
 .about-us-section h2 {
     color: white;
 }
-
 /*resized font for about us section*/
 .fw-normal {
     font-size: 30px !important;

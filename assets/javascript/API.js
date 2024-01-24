@@ -6,11 +6,35 @@ const postcodeAPI = "https://api.postcodes.io/postcodes/";
 const postcodeCrime = "https://api.postcodes.io/postcodes/<postcode>"
 const crimeAPI = "https://data.police.uk/api/crimes-street/all-crime?lat=LAT_HERE&lng=LONG_HERE";
 
-// Function to fetch postcode data and save searches
 function fetchPostcodeData() {
     const postcodeToQuery = document.getElementById('postcodeInput').value;
+
+    // Validate the postcode format
+    if (!isValidUKPostcode(postcodeToQuery)) {
+        // Display the error modal
+        displayErrorModal();
+        return;
+    }
+
+    // Save the search to local storage
     saveSearchToLocalStorage(postcodeToQuery);
+
+    // Fetch postcode information
     fetchPostcodeInfo(postcodeToQuery);
+}
+
+// Function to validate UK postcode format
+function isValidUKPostcode(postcode) {
+    // Regular expression for UK postcode format
+    const postcodeRegex = /^[A-Z]{1,2}\d[A-Z\d]? \d[A-Z]{2}$/i;
+    return postcodeRegex.test(postcode);
+}
+
+//modal js here
+// Function to display the error modal
+function displayErrorModal() {
+    const modal = new bootstrap.Modal(document.querySelector('.modal'));
+    modal.show();
 }
 
 // Function to fetch postcode information from the Postcodes API
