@@ -29,7 +29,8 @@
 .data {
     display: flex;
     justify-content: center;
-    height: 336px;
+    /* height: 336px; */
+    height: 30em !important;
 }
 
 .search-container {
@@ -38,6 +39,15 @@
     margin-right: 10px;
     flex-grow: 0.1;
     width: 350px;
+}
+
+.btn {
+    transition-duration: 0.4s !important;
+  }
+  
+.btn:hover {
+    background-color: #1C7BC0 !important; /* Green */
+    color: white !important;
 }
 
 /* .list-group {
@@ -67,20 +77,25 @@
     margin: 0.625em;
     margin-top: 0;
     width: 25em;
-    height: 18.75em !important;
+    height: 27.7em !important;
 }
 
 /*about us section*/
 .about-us {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
+    width: 100% !important;
+    margin-top: 4rem;
+    padding-left: 50%;
+    padding-right: 50%;
+    background-color: #1C7BC0;
 }
 
 .about-us-section {
     width: 250px;
     text-align: center;
     margin: 0.625em;
-    margin-top: 8em;
+    padding-top: 4em;
 }
 
 /*resized font for about us section*/
