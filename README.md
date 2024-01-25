@@ -48,6 +48,14 @@ Make informed decisions by comparing multiple postcodes side by side. Here's how
 
 <img src="https://github.com/Gemma-Wood/Postcode-Guardian/blob/main/assets/media/Demo.gif">
 
+## Contributors
+
+### Gemma Wood
+
+### Lauren Eaton
+
+### Rachel Atkinson 
+
 ## License
 
 Licensed under MIT.
