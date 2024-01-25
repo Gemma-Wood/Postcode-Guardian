@@ -8,11 +8,16 @@
 }
 
 .navlogo {
-    height: 40px;
-    width: 120px;
+    height: 2.5em;
+    width: 7.5em;
 }
 
 /*jumbotron css*/
+.jumboimg {
+    max-width: 100%;
+    height: auto;
+}
+
 .jumbotron {
     margin-top: 0 !important;
 }
@@ -29,6 +34,7 @@
 /*data css to go here*/
 .data {
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: center;
     /* height: 336px; */
     height: 30em !important;
@@ -37,9 +43,9 @@
 .search-container {
     margin-left: 0.625em !important;
     margin-bottom: 0.625em;
-    margin-right: 10px;
+    margin-right: 0.625em;
     flex-grow: 0.1;
-    width: 350px;
+    width: 21.875em;
 }
 
 .btn {
@@ -133,25 +139,53 @@
 /*footer css*/
 footer {
     background-color: #2d2d2d;
-    padding: 8px;
+    padding: 0.5em;
     color: #ffffff;
 }
 
 footer p {
     display: flex;
     justify-content: center;
-    font-size: 10px;
-    margin-top: 20px;
+    font-size: 0.625em;
+    margin-top: 1.25em;
 }
 
 /*modal css*/
 .modal-pic {
-    width: 270px;
-    height: 80px;
+    width: 16.875em;
+    height: 5em;
 }
 
 /*overflow css*/
 html,
 body {
     overflow-x: hidden;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 768px) {
+    .data {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 40em !important;
+    }
+
+    .search-container, .postcode-data-container, .crime-data-container {
+        width: 80%;
+    }
+
+    .developer-jumbotron {
+        margin-top: 6em !important;
+    }
+
+    .about-us {
+        display: flex;
+        gap: 1.875em;
+    }
+
+    .navbar-toggler {
+        background-color: #1C7BC0;
+        border: 1px solid white;
+    }
 }
