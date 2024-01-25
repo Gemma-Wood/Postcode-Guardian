@@ -35,13 +35,13 @@
         </div>
     </nav>
 
-    <div class="my-5 jumbotron">
+    <div class="my-5 jumbotron ">
         <!--L: header or jumbotron-->
         <!--L: using width to width jumbotron in the examples in bootstrap-->
         <div class="jumbotext p-5 text-center bg-body-tertiary">
             <div class="container py-5">
                 <!-- <h1 class="jumbotitle text-body-emphasis">Postcode Guardian</h1> -->
-                <img src="./assets/logos/PoscodeGuardianW.png">
+                <img class="jumboimg" src="./assets/logos/PoscodeGuardianW.png">
                 <p class="col-lg-8 mx-auto lead">
                     Your Gateway to Neighbourhood Insight and Safety Assurance. <br>Navigate communities with
                     confidence,
@@ -64,6 +64,7 @@
                 <button id="clearHistoryButton" class="btn btn-outline-secondary" type="button">Clear History</button>
 
             </div>
+
             <!--L: need a list group to populate when a postcode is searched-->
             <div class="list-group search-history">
                 <a id="postcode1" class="list-group-item list-group-item-action"></a>
@@ -78,7 +79,7 @@
         </div>
 
         <!--section for postcode results-->
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3 postcode-data-container">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3 postcode-data-container .col-sm-12">
 
             <h2>Postcode Data</h2>
             <p id="regionData"></p>
@@ -88,7 +89,7 @@
         </div>
 
         <!--section for crime results-->
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3 crime-data-container">
+        <div class="h-100 p-5 bg-body-tertiary border rounded-3 crime-data-container .col-sm-12">
             <h2>Crime Data</h2>
             <p>Results (1 - 30)</p>
             <p id="crimeData"></p>
