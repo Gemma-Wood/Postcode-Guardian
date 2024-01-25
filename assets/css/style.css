@@ -31,7 +31,7 @@
     background-color: #1C7BC0 !important;
 }
 
-/*body css to go here*/
+/*data css to go here*/
 .data {
     display: flex;
     /* flex-wrap: wrap; */
@@ -51,7 +51,7 @@
 .btn {
     transition-duration: 0.4s !important;
 }
-  
+
 .btn:hover {
     background-color: #1C7BC0 !important; 
 
@@ -146,7 +146,7 @@ footer {
 footer p {
     display: flex;
     justify-content: center;
-    font-size: 0.875em;
+    font-size: 0.625em;
     margin-top: 1.25em;
 }
 
@@ -156,6 +156,7 @@ footer p {
     height: 5em;
 }
 
+/*overflow css*/
 html,
 body {
     overflow-x: hidden;
