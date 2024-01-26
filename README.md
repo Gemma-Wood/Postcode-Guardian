@@ -29,7 +29,12 @@ Understanding the demographic composition of an area is crucial. Here's how you 
 - After searching for a postcode, navigate to the "Postcode and Crime Stats" section.
 - Gain insights into various types of crimes, including the date and location.
 
-### 3. Comparative Analysis
+### 3. Incorporate Location with Interactive Maps
+Visualise the geographic location of the selected postcode:
+
+- Gain a better understanding of the area by exploring the map.
+
+### 4. Comparative Analysis
 
 Make informed decisions by comparing multiple postcodes side by side. Here's how:
 
