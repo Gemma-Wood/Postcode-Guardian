@@ -1,4 +1,4 @@
-# Postcode Guardian
+![Screenshot 1](https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/75cfd2ba-45bd-436b-9b24-7d443abd66e8)![Screenshot 1](https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/1ec4463d-4a90-47d9-9f02-4582decb3bec)# Postcode Guardian
 
 <p align="center"> <img width="556" alt="Screenshot 2024-01-25 at 12 37 49" src="https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/e2622dfe-b746-423f-81e1-1e0d41872d1b">
 
@@ -39,11 +39,9 @@ Make informed decisions by comparing multiple postcodes side by side. Here's how
 
 ## Project Screenshots
 
-<img width="1494" alt="Screenshot 2024-01-24 at 21 16 58" src="https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/6bcaa32d-698b-463d-ae32-2f5bd945a8a2">
+![Screenshot 1](https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/f9117ce5-bdce-4728-a984-e984afa723e0)
 
-<img width="1496" alt="Screenshot 2024-01-24 at 21 21 24" src="https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/a1ad9c7d-7dc3-453d-9aee-13994d427b15">
-
-<img width="1494" alt="Screenshot 2024-01-24 at 21 30 24" src="https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/495e073c-c26a-4594-86e7-d2e7fc6fa955">
+![error screenshot](https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/48ab8388-d34b-4005-86f6-611ba6310913)
 
 <img src="https://github.com/Gemma-Wood/Postcode-Guardian/blob/main/assets/media/Demo.gif">
 
