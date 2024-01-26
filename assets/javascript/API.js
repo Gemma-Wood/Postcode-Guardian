@@ -4,6 +4,10 @@ const postcodeAPI = "https://api.postcodes.io/postcodes/";
 const postcodeCrime = "https://api.postcodes.io/postcodes/<postcode>"
 const crimeAPI = "https://data.police.uk/api/crimes-street/all-crime?lat=LAT_HERE&lng=LONG_HERE";
 
+const mapAPI = "  https://www.google.com/maps/embed/v1/MAP_MODE?key=&parameters";
+const mapAPIKey = "AIzaSyA0WfirPNmDBJrvF2nWI2vjgD2bxonAG7I";
+
+
 function fetchPostcodeData() {
     const postcodeToQuery = document.getElementById('postcodeInput').value;
     if (!isValidUKPostcode(postcodeToQuery)) {
@@ -22,28 +26,6 @@ function isValidUKPostcode(postcode) {
 function displayErrorModal() {
     const modal = new bootstrap.Modal(document.querySelector('.modal'));
     modal.show();
-}
-
-function fetchPostcodeInfo(postcode) {
-    // Make API call using fetch
-    fetch(`${postcodeAPI}${postcode}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log('API Response:', data);
-            const postcodeInfo = data.result;
-            if (postcodeInfo !== null && postcodeInfo !== undefined) {
-                document.getElementById('regionData').innerHTML = `<strong>Region:</strong><br> ${postcodeInfo.region}`;
-                document.getElementById('districtData').innerHTML = `<strong>Admin District:</strong><br> ${postcodeInfo.admin_district}`;
-                document.getElementById('wardData').innerHTML = `<strong>Admin Ward:</strong><br> ${postcodeInfo.admin_ward}`;
-                document.getElementById('parliamentData').innerHTML = `<strong>Parliamentary Constituency:</strong><br> ${postcodeInfo.parliamentary_constituency}`;
-                fetchCrimeData(postcodeInfo.latitude, postcodeInfo.longitude);
-            } else {
-                console.error('Postcode information is null or undefined.');
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching postcode data:', error);
-        });
 }
 
 function fetchCrimeData(latitude, longitude) {
@@ -67,8 +49,6 @@ function fetchCrimeData(latitude, longitude) {
         });
 }
 
-
-
 function formatCrimeData(crimeData) {
     let html = '<ul>';
     for (let i = 0; i < Math.min(30, crimeData.length); i++) {
@@ -83,6 +63,44 @@ function formatCrimeData(crimeData) {
     }
     html += '</ul>';
     return html;
+}
+
+function generateMap(latitude, longitude) {
+    const mapContainer = document.getElementById('mapContainer');
+
+    const mapURL = `https://www.google.com/maps/embed/v1/view?key=${mapAPIKey}&center=${latitude},${longitude}&zoom=15&maptype=roadmap`;
+
+    const mapIframe = document.createElement('iframe');
+    mapIframe.setAttribute('width', '100%');
+    mapIframe.setAttribute('height', '400');
+    mapIframe.setAttribute('frameborder', '0');
+    mapIframe.setAttribute('style', 'border:0');
+    mapIframe.setAttribute('src', mapURL);
+
+    mapContainer.innerHTML = '';
+    mapContainer.appendChild(mapIframe);
+}
+
+function fetchPostcodeInfo(postcode) {
+    fetch(`${postcodeAPI}${postcode}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log('API Response:', data);
+            const postcodeInfo = data.result;
+            if (postcodeInfo !== null && postcodeInfo !== undefined) {
+                document.getElementById('regionData').innerHTML = `<strong>Region:</strong><br> ${postcodeInfo.region}`;
+                document.getElementById('districtData').innerHTML = `<strong>Admin District:</strong><br> ${postcodeInfo.admin_district}`;
+                document.getElementById('wardData').innerHTML = `<strong>Admin Ward:</strong><br> ${postcodeInfo.admin_ward}`;
+                document.getElementById('parliamentData').innerHTML = `<strong>Parliamentary Constituency:</strong><br> ${postcodeInfo.parliamentary_constituency}`;
+                generateMap(postcodeInfo.latitude, postcodeInfo.longitude);
+                fetchCrimeData(postcodeInfo.latitude, postcodeInfo.longitude);
+            } else {
+                console.error('Postcode information is null or undefined.');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching postcode data:', error);
+        });
 }
 
 document.getElementById('searchButton').addEventListener('click', fetchPostcodeData);
