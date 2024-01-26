@@ -1,6 +1,6 @@
-# Postcode Guardian
-
 <p align="center"> <img width="556" alt="Screenshot 2024-01-25 at 12 37 49" src="https://github.com/Gemma-Wood/Postcode-Guardian/assets/150028191/e2622dfe-b746-423f-81e1-1e0d41872d1b">
+
+# Postcode Guardian
 
 Interactive Front-End Application that solves a real-world problem by integrating data received from multiple server-side API requests.
 
